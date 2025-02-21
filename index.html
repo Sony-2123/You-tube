@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+    
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: -35px;
+        }
+
+        .search-bar img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icons img {
+            width: 24px;
+            cursor: pointer;
+        }
+
+    
+        .sidebar {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 80px;
+            height: 100%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar img {
+            width: 30px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+    
+        .categories {
+            margin-left: 100px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .category {
+            padding: 8px 15px;
+            background: #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .category:hover {
+            background: #ccc;
+        }
+
+        
+        .video-container {
+            margin-left: 100px;
+            padding: 20px;
+            display: grid;
+         gap: 20px;
+        }
+
+        .video {
+            background: white;
+            padding: 10px;
+            
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+        }
+
+        
+
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60px;
+            }
+            .categories {
+                margin-left: 70px;
+            }
+            .video-container {
+                margin-left: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img  style="width:50px;"src="./you.jpg" alt="">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button><img src="./search.png" alt="Search"></button>
+        </div>
+        <div class="icons">
+            <img src="./mic_FILL0_wght400_GRAD0_opsz24.png" alt="Mic">
+            <img src="./notifications_FILL0_wght400_GRAD0_opsz24.png" alt="Notifications">
+            <img src="./add_circle_FILL0_wght400_GRAD0_opsz24.png" alt="Add">
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <img src="./home_FILL0_wght400_GRAD0_opsz24.png">
+        <p>Home</p>
+        <img src="./subscriptions_FILL0_wght400_GRAD0_opsz24.png" alt="Subscriptions">
+        <p>Subscriptions</p>
+        <img src="./switch_video_FILL0_wght400_GRAD0_opsz24.png" alt="Videos">
+        <p>Videos</p>
+        
+    </div>
+
+    <div class="categories">
+        <div class="category">All</div>
+        <div class="category">Mixes</div>
+        <div class="category">Music</div>
+        <div class="category">Tamil Cinema</div>
+        <div class="category">Dhee</div>
+        <div class="category">K.S. Chitra</div>
+        <div class="category">Live</div>
+        <div class="category">English Grammar</div>
+        <div class="category">Vocabulary</div>
+        <div class="category">Game Shows</div>
+        <div class="category">Lectures</div>
+        <div class="category">Accounting</div>
+        <div class="category">Computer Science</div>
+    </div>
+
+    <div class="video-container">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/pbfdXvYKcLY?si=zx4lpBSh5M3us840&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Stories in telugu</p>
+        </div>
+        <div class="video">
+
+
+            <iframe src="https://www.youtube.com/embed/PJojvua31vk?si=X2_lyg9vGJjTuZmh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
+                <p>BB8 Utsavam</p>
+        </div>
+
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l-0Fqn8oBZk?si=_oslNpHSFnuBhsNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Ishmart Jodi</p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/f6crlMlepSw?si=R4y5H7xNk2FnbBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Nanna bharatham</p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kIMFNTDoBNg?si=ZL_1DsNsiZ_X1tuu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Wrong Number</p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_euLQ0J78FQ?si=xOQ5f9i9rIZ5ntwm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>ZINDAGI</p>
+        </div>
+    </div>
+
+</body>
+</html>
